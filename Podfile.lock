@@ -1,18 +1,26 @@
 PODS:
+  - JSONModel (1.8.0)
   - SDWebImage (4.4.2):
     - SDWebImage/Core (= 4.4.2)
   - SDWebImage/Core (4.4.2)
+  - SimpleKeychain (0.8.1)
 
 DEPENDENCIES:
+  - JSONModel
   - SDWebImage
+  - SimpleKeychain
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - JSONModel
     - SDWebImage
+    - SimpleKeychain
 
 SPEC CHECKSUMS:
+  JSONModel: 02ab723958366a3fd27da57ea2af2113658762e9
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+  SimpleKeychain: e2485c28d82fcece35e9e41faeac42ebfe614815
 
-PODFILE CHECKSUM: 1e82d3770453314ccc55f9063f1c2f02f6d05b5b
+PODFILE CHECKSUM: 73b8b782d0a2d29f89cfce6bc2fb04ca5ce4d61d
 
 COCOAPODS: 1.5.3

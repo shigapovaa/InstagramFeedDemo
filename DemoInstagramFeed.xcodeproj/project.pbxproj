@@ -13,6 +13,10 @@
 		5238FAC021A4A0A7005963DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5238FABF21A4A0A7005963DC /* Assets.xcassets */; };
 		5238FAC321A4A0A7005963DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5238FAC121A4A0A7005963DC /* LaunchScreen.storyboard */; };
 		5238FAC621A4A0A7005963DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5238FAC521A4A0A7005963DC /* main.m */; };
+		5238FACF21A4AC84005963DC /* WKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5238FACE21A4AC84005963DC /* WKWebViewController.m */; };
+		52C7BD1E21A75115004A4DAE /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C7BD1D21A75115004A4DAE /* Constants.m */; };
+		52C7BD2421A7C28A004A4DAE /* IGApiService.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C7BD2321A7C28A004A4DAE /* IGApiService.m */; };
+		52C7BD2721A7C3D7004A4DAE /* IGCredentialsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C7BD2621A7C3D7004A4DAE /* IGCredentialsManager.m */; };
 		C506B9408A68AB62865A5C68 /* libPods-DemoInstagramFeed.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 330E48E277639018671258B9 /* libPods-DemoInstagramFeed.a */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +34,14 @@
 		5238FAC221A4A0A7005963DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5238FAC421A4A0A7005963DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5238FAC521A4A0A7005963DC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5238FACD21A4AC84005963DC /* WKWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKWebViewController.h; sourceTree = "<group>"; };
+		5238FACE21A4AC84005963DC /* WKWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKWebViewController.m; sourceTree = "<group>"; };
+		52C7BD1C21A75115004A4DAE /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		52C7BD1D21A75115004A4DAE /* Constants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		52C7BD2221A7C28A004A4DAE /* IGApiService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IGApiService.h; sourceTree = "<group>"; };
+		52C7BD2321A7C28A004A4DAE /* IGApiService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IGApiService.m; sourceTree = "<group>"; };
+		52C7BD2521A7C3D7004A4DAE /* IGCredentialsManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IGCredentialsManager.h; sourceTree = "<group>"; };
+		52C7BD2621A7C3D7004A4DAE /* IGCredentialsManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IGCredentialsManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +85,7 @@
 		5238FAB521A4A09E005963DC /* DemoInstagramFeed */ = {
 			isa = PBXGroup;
 			children = (
+				52C7BD1A21A74F67004A4DAE /* Common */,
 				5238FACC21A4A34B005963DC /* Auth */,
 				5238FAB621A4A09E005963DC /* AppDelegate.h */,
 				5238FAB721A4A09E005963DC /* AppDelegate.m */,
@@ -88,10 +101,49 @@
 		5238FACC21A4A34B005963DC /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				5238FAB921A4A09E005963DC /* IGAuthViewController.h */,
-				5238FABA21A4A09E005963DC /* IGAuthViewController.m */,
+				52C7BD2021A7BFB1004A4DAE /* Controller */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		52C7BD1A21A74F67004A4DAE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				52C7BD2121A7BFF5004A4DAE /* Network */,
+				52C7BD1F21A7BF88004A4DAE /* Constants */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		52C7BD1F21A7BF88004A4DAE /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				52C7BD1C21A75115004A4DAE /* Constants.h */,
+				52C7BD1D21A75115004A4DAE /* Constants.m */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		52C7BD2021A7BFB1004A4DAE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5238FAB921A4A09E005963DC /* IGAuthViewController.h */,
+				5238FABA21A4A09E005963DC /* IGAuthViewController.m */,
+				5238FACD21A4AC84005963DC /* WKWebViewController.h */,
+				5238FACE21A4AC84005963DC /* WKWebViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		52C7BD2121A7BFF5004A4DAE /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				52C7BD2221A7C28A004A4DAE /* IGApiService.h */,
+				52C7BD2321A7C28A004A4DAE /* IGApiService.m */,
+				52C7BD2521A7C3D7004A4DAE /* IGCredentialsManager.h */,
+				52C7BD2621A7C3D7004A4DAE /* IGCredentialsManager.m */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		A303CF6B4DC943DB042DD708 /* Pods */ = {
@@ -195,9 +247,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52C7BD1E21A75115004A4DAE /* Constants.m in Sources */,
 				5238FABB21A4A09E005963DC /* IGAuthViewController.m in Sources */,
+				52C7BD2421A7C28A004A4DAE /* IGApiService.m in Sources */,
 				5238FAC621A4A0A7005963DC /* main.m in Sources */,
 				5238FAB821A4A09E005963DC /* AppDelegate.m in Sources */,
+				52C7BD2721A7C3D7004A4DAE /* IGCredentialsManager.m in Sources */,
+				5238FACF21A4AC84005963DC /* WKWebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,7 +398,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DemoInstagramFeed/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ru.alsu.DemoInstagramFeed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -356,7 +415,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DemoInstagramFeed/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ru.alsu.DemoInstagramFeed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

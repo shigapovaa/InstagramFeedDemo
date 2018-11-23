@@ -1,24 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V7K-i3-hND">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Auth View Controller-->
+        <!--Log In-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="IGAuthViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RD4-ja-lPq">
+                                <rect key="frame" x="144.5" y="567" width="86" height="30"/>
+                                <state key="normal" title="Begin OAuth"/>
+                                <connections>
+                                    <action selector="didTapStartOAuthButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cTe-dG-1zy"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Demo Instagram Feed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cH1-sR-6Az">
+                                <rect key="frame" x="46.5" y="109" width="282.5" height="36"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTr-tU-ycg">
+                                <rect key="frame" x="25" y="252.5" width="325.5" height="162.5"/>
+                                <string key="text">This is a demo application that uses Instagram API Sandbox to retrieve user's media and present it in a feed.
+
+Note that Sandbox restricts the API to return only 20 most recent user posts and only allows accounts that were invited to the sandbox.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sTr-tU-ycg" firstAttribute="top" relation="greaterThanOrEqual" secondItem="cH1-sR-6Az" secondAttribute="bottom" constant="50" id="0yM-Un-1DU"/>
+                            <constraint firstItem="RD4-ja-lPq" firstAttribute="top" relation="greaterThanOrEqual" secondItem="sTr-tU-ycg" secondAttribute="bottom" constant="30" id="Nzb-ay-ncu"/>
+                            <constraint firstItem="cH1-sR-6Az" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T3D-TS-gH8"/>
+                            <constraint firstItem="RD4-ja-lPq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XUv-wD-5CJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RD4-ja-lPq" secondAttribute="bottom" priority="750" constant="70" id="ac2-y9-eLH"/>
+                            <constraint firstItem="sTr-tU-ycg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="alf-Hf-ifz"/>
+                            <constraint firstItem="sTr-tU-ycg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" priority="750" id="bJ2-TS-w3S"/>
+                            <constraint firstItem="sTr-tU-ycg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kIy-5b-0as"/>
+                            <constraint firstItem="cH1-sR-6Az" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="o0P-d8-wt2"/>
+                            <constraint firstItem="cH1-sR-6Az" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="r3L-4c-J4s"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Log In" id="nZs-4j-Acy"/>
+                    <connections>
+                        <outlet property="startOAuthButton" destination="RD4-ja-lPq" id="RGP-P6-bEt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="980" y="-573"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VeI-Mf-Ktu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="V7K-i3-hND" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xwn-3V-tA2">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="QFH-CF-6hW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Nn-fL-4Ef" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="149.59999999999999" y="-572.56371814092961"/>
         </scene>
     </scenes>
 </document>

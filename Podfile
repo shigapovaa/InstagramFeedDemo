@@ -7,4 +7,6 @@ target 'DemoInstagramFeed' do
 
   # Pods for DemoInstagramFeed
   pod 'SDWebImage'
+  pod 'SimpleKeychain'
+  pod 'JSONModel'
 end
