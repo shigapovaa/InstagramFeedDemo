@@ -7,7 +7,16 @@
 //
 
 #import "IGCredentialsManager.h"
+#import <SimpleKeychain/SimpleKeychain.h>
 
 @implementation IGCredentialsManager
+
++ (NSString *)getAccessToken {
+    return [[A0SimpleKeychain keychain] stringForKey:IGAccessTokenKeychainKey];
+}
+
++ (void)setAccessToken:(NSString *)accessToken {
+    [[A0SimpleKeychain keychain] setString:accessToken forKey:IGAccessTokenKeychainKey];
+}
 
 @end

@@ -16,6 +16,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface IGCredentialsManager : NSObject
 
+FOUNDATION_EXPORT NSString *const IGAccessTokenKeychainKey;
+
++ (void)setAccessToken:(NSString *)accessToken;
++ (nullable NSString *)getAccessToken;
+
 @end
 
 NS_ASSUME_NONNULL_END
