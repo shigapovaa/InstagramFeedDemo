@@ -114,14 +114,20 @@ Note that Sandbox restricts the API to return only 20 most recent user posts and
                             <outlet property="delegate" destination="Xh6-4z-HJl" id="hJR-9K-GOD"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Feed" id="7SB-eW-gvi"/>
+                    <navigationItem key="navigationItem" title="Feed" id="7SB-eW-gvi">
+                        <barButtonItem key="rightBarButtonItem" title="Exit" id="02b-U9-ye9">
+                            <connections>
+                                <action selector="didTapExit:" destination="Xh6-4z-HJl" id="H4R-zy-D0Y"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="V7K-i3-hND" kind="presentation" identifier="auth" id="Ahp-fw-i3i"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yHv-5B-jDj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="980" y="155"/>
+            <point key="canvasLocation" x="980" y="163"/>
         </scene>
     </scenes>
 </document>

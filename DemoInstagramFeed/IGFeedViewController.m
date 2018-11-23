@@ -35,6 +35,17 @@
 
 - (void)configureTableView {
     [self.tableView registerNib:[UINib nibWithNibName:@"IGPostTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
+    
+    UIRefreshControl *control = [[UIRefreshControl alloc] init];
+    [control addTarget:self action:@selector(loadFeedData) forControlEvents:UIControlEventValueChanged];
+    [self setRefreshControl:control];
+}
+
+- (IBAction)didTapExit:(id)sender {
+    self.posts = [NSMutableArray new];
+    [self.tableView reloadData];
+    [IGCredentialsManager clear];
+    [self showAuthScreenIfNeeded];
 }
 
 #pragma mark - Routing
@@ -65,10 +76,13 @@
 - (void)loadFeedData {
     if (self.isLoadingData) return;
     
+    [self.refreshControl beginRefreshing];
+    
     self.isLoadingData = true;
     
     [IGApiService getUserRecentPosts:nil completion:^(NSError * _Nullable error, IGMediaResponse * _Nullable response) {
         self.isLoadingData = false;
+        [self.refreshControl endRefreshing];
         
         if (error != nil) {
             [self showLoadingErrorWithMessage:error.localizedDescription];

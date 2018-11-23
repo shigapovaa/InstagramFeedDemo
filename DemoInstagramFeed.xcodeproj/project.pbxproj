@@ -14,6 +14,7 @@
 		5238FAC321A4A0A7005963DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5238FAC121A4A0A7005963DC /* LaunchScreen.storyboard */; };
 		5238FAC621A4A0A7005963DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5238FAC521A4A0A7005963DC /* main.m */; };
 		5238FACF21A4AC84005963DC /* WKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5238FACE21A4AC84005963DC /* WKWebViewController.m */; };
+		525857CB21A81788009FE65B /* IGPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 525857CA21A81788009FE65B /* IGPostViewController.m */; };
 		52C7BD1E21A75115004A4DAE /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C7BD1D21A75115004A4DAE /* Constants.m */; };
 		52C7BD2421A7C28A004A4DAE /* IGApiService.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C7BD2321A7C28A004A4DAE /* IGApiService.m */; };
 		52C7BD2721A7C3D7004A4DAE /* IGCredentialsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C7BD2621A7C3D7004A4DAE /* IGCredentialsManager.m */; };
@@ -44,6 +45,8 @@
 		5238FAC521A4A0A7005963DC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5238FACD21A4AC84005963DC /* WKWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKWebViewController.h; sourceTree = "<group>"; };
 		5238FACE21A4AC84005963DC /* WKWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKWebViewController.m; sourceTree = "<group>"; };
+		525857C921A81788009FE65B /* IGPostViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IGPostViewController.h; sourceTree = "<group>"; };
+		525857CA21A81788009FE65B /* IGPostViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IGPostViewController.m; sourceTree = "<group>"; };
 		52C7BD1C21A75115004A4DAE /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		52C7BD1D21A75115004A4DAE /* Constants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		52C7BD2221A7C28A004A4DAE /* IGApiService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IGApiService.h; sourceTree = "<group>"; };
@@ -202,6 +205,8 @@
 			children = (
 				52C7BD3121A7E6D1004A4DAE /* IGFeedViewController.h */,
 				52C7BD3221A7E6D1004A4DAE /* IGFeedViewController.m */,
+				525857C921A81788009FE65B /* IGPostViewController.h */,
+				525857CA21A81788009FE65B /* IGPostViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -326,6 +331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				525857CB21A81788009FE65B /* IGPostViewController.m in Sources */,
 				52C7BD1E21A75115004A4DAE /* Constants.m in Sources */,
 				52C7BD3C21A7F3B6004A4DAE /* IGPaginationInfo.m in Sources */,
 				5238FABB21A4A09E005963DC /* IGAuthViewController.m in Sources */,
