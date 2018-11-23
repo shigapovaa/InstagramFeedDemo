@@ -61,4 +61,8 @@
     }] resume];
 }
 
++ (void)getUserRecentPosts:(NSString *)pageURLString completion:(void (^)(NSError * _Nullable, NSArray * _Nullable))completionHandler {
+    
+}
+
 @end

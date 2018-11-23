@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V7K-i3-hND">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fPU-M3-BLy">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -82,6 +82,43 @@ Note that Sandbox restricts the API to return only 20 most recent user posts and
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Nn-fL-4Ef" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="149.59999999999999" y="-572.56371814092961"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="3gF-DG-E7N">
+            <objects>
+                <viewController id="eWC-JH-nxZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WLj-X7-q47">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ba4-0E-CeK"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cqp-cK-lKU"/>
+                    <connections>
+                        <segue destination="V7K-i3-hND" kind="presentation" identifier="auth" id="QjC-mI-rTV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HEr-SD-Gxt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="980" y="164"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FAd-ge-Arg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fPU-M3-BLy" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PDM-ez-8Nc">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eWC-JH-nxZ" kind="relationship" relationship="rootViewController" id="aNJ-Gr-uR9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sJQ-lS-cwc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="150" y="164"/>
         </scene>
     </scenes>
 </document>

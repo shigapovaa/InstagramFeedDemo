@@ -30,7 +30,7 @@
     if ([IGCredentialsManager hasAccessToken]) {
         return NO;
     } else {
-        
+        [self performSegueWithIdentifier:@"auth" sender:self];
         return YES;
     }
 }

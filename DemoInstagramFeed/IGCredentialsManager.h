@@ -39,6 +39,8 @@ FOUNDATION_EXPORT NSString *const IGAccessTokenKeychainKey;
  */
 + (BOOL)hasAccessToken;
 
++ (void)clear;
+
 @end
 
 NS_ASSUME_NONNULL_END

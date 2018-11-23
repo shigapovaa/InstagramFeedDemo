@@ -18,6 +18,10 @@
 		52C7BD2421A7C28A004A4DAE /* IGApiService.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C7BD2321A7C28A004A4DAE /* IGApiService.m */; };
 		52C7BD2721A7C3D7004A4DAE /* IGCredentialsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C7BD2621A7C3D7004A4DAE /* IGCredentialsManager.m */; };
 		52C7BD3321A7E6D1004A4DAE /* IGFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C7BD3221A7E6D1004A4DAE /* IGFeedViewController.m */; };
+		52C7BD3621A7EF1B004A4DAE /* IGPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C7BD3521A7EF1B004A4DAE /* IGPost.m */; };
+		52C7BD3921A7EFC2004A4DAE /* IGUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C7BD3821A7EFC2004A4DAE /* IGUser.m */; };
+		52C7BD3C21A7F3B6004A4DAE /* IGPaginationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C7BD3B21A7F3B6004A4DAE /* IGPaginationInfo.m */; };
+		52C7BD3F21A7F409004A4DAE /* IGMediaResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C7BD3E21A7F409004A4DAE /* IGMediaResponse.m */; };
 		C506B9408A68AB62865A5C68 /* libPods-DemoInstagramFeed.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 330E48E277639018671258B9 /* libPods-DemoInstagramFeed.a */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +49,14 @@
 		52C7BD2621A7C3D7004A4DAE /* IGCredentialsManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IGCredentialsManager.m; sourceTree = "<group>"; };
 		52C7BD3121A7E6D1004A4DAE /* IGFeedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IGFeedViewController.h; sourceTree = "<group>"; };
 		52C7BD3221A7E6D1004A4DAE /* IGFeedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IGFeedViewController.m; sourceTree = "<group>"; };
+		52C7BD3421A7EF1B004A4DAE /* IGPost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IGPost.h; sourceTree = "<group>"; };
+		52C7BD3521A7EF1B004A4DAE /* IGPost.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IGPost.m; sourceTree = "<group>"; };
+		52C7BD3721A7EFC2004A4DAE /* IGUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IGUser.h; sourceTree = "<group>"; };
+		52C7BD3821A7EFC2004A4DAE /* IGUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IGUser.m; sourceTree = "<group>"; };
+		52C7BD3A21A7F3B6004A4DAE /* IGPaginationInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IGPaginationInfo.h; sourceTree = "<group>"; };
+		52C7BD3B21A7F3B6004A4DAE /* IGPaginationInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IGPaginationInfo.m; sourceTree = "<group>"; };
+		52C7BD3D21A7F409004A4DAE /* IGMediaResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IGMediaResponse.h; sourceTree = "<group>"; };
+		52C7BD3E21A7F409004A4DAE /* IGMediaResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IGMediaResponse.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +174,14 @@
 		52C7BD2F21A7E1B2004A4DAE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				52C7BD3421A7EF1B004A4DAE /* IGPost.h */,
+				52C7BD3521A7EF1B004A4DAE /* IGPost.m */,
+				52C7BD3721A7EFC2004A4DAE /* IGUser.h */,
+				52C7BD3821A7EFC2004A4DAE /* IGUser.m */,
+				52C7BD3A21A7F3B6004A4DAE /* IGPaginationInfo.h */,
+				52C7BD3B21A7F3B6004A4DAE /* IGPaginationInfo.m */,
+				52C7BD3D21A7F409004A4DAE /* IGMediaResponse.h */,
+				52C7BD3E21A7F409004A4DAE /* IGMediaResponse.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -277,13 +297,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				52C7BD1E21A75115004A4DAE /* Constants.m in Sources */,
+				52C7BD3C21A7F3B6004A4DAE /* IGPaginationInfo.m in Sources */,
 				5238FABB21A4A09E005963DC /* IGAuthViewController.m in Sources */,
 				52C7BD2421A7C28A004A4DAE /* IGApiService.m in Sources */,
 				5238FAC621A4A0A7005963DC /* main.m in Sources */,
+				52C7BD3921A7EFC2004A4DAE /* IGUser.m in Sources */,
 				52C7BD3321A7E6D1004A4DAE /* IGFeedViewController.m in Sources */,
 				5238FAB821A4A09E005963DC /* AppDelegate.m in Sources */,
 				52C7BD2721A7C3D7004A4DAE /* IGCredentialsManager.m in Sources */,
+				52C7BD3621A7EF1B004A4DAE /* IGPost.m in Sources */,
 				5238FACF21A4AC84005963DC /* WKWebViewController.m in Sources */,
+				52C7BD3F21A7F409004A4DAE /* IGMediaResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

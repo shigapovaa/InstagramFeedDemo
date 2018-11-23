@@ -25,4 +25,8 @@ NSString *const IGAccessTokenKeychainKey = @"ig-demo-feed-access-token";
     return [IGCredentialsManager getAccessToken] != nil;
 }
 
++ (void)clear {
+    [[A0SimpleKeychain keychain] deleteEntryForKey:IGAccessTokenKeychainKey];
+}
+
 @end
