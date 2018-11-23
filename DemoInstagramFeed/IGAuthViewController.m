@@ -28,6 +28,21 @@
 
 // MARK: - Data
 - (void)handleFinalRedirectURL:(NSURL *)url {
+    NSArray<NSURLQueryItem *> *queryItems = [[NSURLComponents componentsWithURL:url resolvingAgainstBaseURL:NO] queryItems];
+    
+    NSString *code = [[[queryItems
+                        filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"name=%@", @"code"]]
+                       firstObject] value];
+    if (code != nil) {
+        [self performAccessTokenRequestWithCode:code];
+    } else {
+        [self showAuthenticationErrorWithMessage:@"Couldn't get client code from redirect URI"];
+    }
+}
+
+- (void)performAccessTokenRequestWithCode:(NSString *)code {
+    [self.startOAuthButton setEnabled:NO];
+    
     
 }
 
@@ -69,13 +84,19 @@
 // MARK: - WKNavigationDelegate
 - (void)webView:(WKWebView *)webView didFailNavigation:(WKNavigation *)navigation withError:(NSError *)error {
     // dismiss currently presented WKWebViewController instance and show the error to the user
-    [self dismissViewControllerAnimated:YES completion:^{
-        [self showAuthenticationErrorWithMessage:error.localizedDescription];
-    }];
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    [self showAuthenticationErrorWithMessage:error.localizedDescription];
 }
 
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
-    NSLog(@"%@", navigationAction.request.URL);
+    
+    NSURL *url = navigationAction.request.URL;
+    if (url != nil && [url.host isEqual: [[NSURL URLWithString:IGRedirectURI] host]]) {
+        NSLog(@"handled url redirect!");
+        [self handleFinalRedirectURL:url];
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }
+    
     decisionHandler(WKNavigationActionPolicyAllow);
 }
 
