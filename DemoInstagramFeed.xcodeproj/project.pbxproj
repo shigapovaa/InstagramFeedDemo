@@ -17,6 +17,7 @@
 		52C7BD1E21A75115004A4DAE /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C7BD1D21A75115004A4DAE /* Constants.m */; };
 		52C7BD2421A7C28A004A4DAE /* IGApiService.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C7BD2321A7C28A004A4DAE /* IGApiService.m */; };
 		52C7BD2721A7C3D7004A4DAE /* IGCredentialsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C7BD2621A7C3D7004A4DAE /* IGCredentialsManager.m */; };
+		52C7BD3321A7E6D1004A4DAE /* IGFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C7BD3221A7E6D1004A4DAE /* IGFeedViewController.m */; };
 		C506B9408A68AB62865A5C68 /* libPods-DemoInstagramFeed.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 330E48E277639018671258B9 /* libPods-DemoInstagramFeed.a */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,8 @@
 		52C7BD2321A7C28A004A4DAE /* IGApiService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IGApiService.m; sourceTree = "<group>"; };
 		52C7BD2521A7C3D7004A4DAE /* IGCredentialsManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IGCredentialsManager.h; sourceTree = "<group>"; };
 		52C7BD2621A7C3D7004A4DAE /* IGCredentialsManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IGCredentialsManager.m; sourceTree = "<group>"; };
+		52C7BD3121A7E6D1004A4DAE /* IGFeedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IGFeedViewController.h; sourceTree = "<group>"; };
+		52C7BD3221A7E6D1004A4DAE /* IGFeedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IGFeedViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +88,9 @@
 		5238FAB521A4A09E005963DC /* DemoInstagramFeed */ = {
 			isa = PBXGroup;
 			children = (
-				52C7BD1A21A74F67004A4DAE /* Common */,
-				5238FACC21A4A34B005963DC /* Auth */,
+				52C7BD2E21A7E18F004A4DAE /* Feed */,
+				52C7BD2C21A7D676004A4DAE /* Auth */,
+				52C7BD2821A7D647004A4DAE /* Common */,
 				5238FAB621A4A09E005963DC /* AppDelegate.h */,
 				5238FAB721A4A09E005963DC /* AppDelegate.m */,
 				5238FABC21A4A09E005963DC /* Main.storyboard */,
@@ -98,44 +102,16 @@
 			path = DemoInstagramFeed;
 			sourceTree = "<group>";
 		};
-		5238FACC21A4A34B005963DC /* Auth */ = {
+		52C7BD2821A7D647004A4DAE /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				52C7BD2021A7BFB1004A4DAE /* Controller */,
+				52C7BD2A21A7D657004A4DAE /* Constants */,
+				52C7BD2921A7D650004A4DAE /* Network */,
 			);
-			path = Auth;
+			name = Common;
 			sourceTree = "<group>";
 		};
-		52C7BD1A21A74F67004A4DAE /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				52C7BD2121A7BFF5004A4DAE /* Network */,
-				52C7BD1F21A7BF88004A4DAE /* Constants */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
-		52C7BD1F21A7BF88004A4DAE /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-				52C7BD1C21A75115004A4DAE /* Constants.h */,
-				52C7BD1D21A75115004A4DAE /* Constants.m */,
-			);
-			path = Constants;
-			sourceTree = "<group>";
-		};
-		52C7BD2021A7BFB1004A4DAE /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				5238FAB921A4A09E005963DC /* IGAuthViewController.h */,
-				5238FABA21A4A09E005963DC /* IGAuthViewController.m */,
-				5238FACD21A4AC84005963DC /* WKWebViewController.h */,
-				5238FACE21A4AC84005963DC /* WKWebViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		52C7BD2121A7BFF5004A4DAE /* Network */ = {
+		52C7BD2921A7D650004A4DAE /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				52C7BD2221A7C28A004A4DAE /* IGApiService.h */,
@@ -143,7 +119,60 @@
 				52C7BD2521A7C3D7004A4DAE /* IGCredentialsManager.h */,
 				52C7BD2621A7C3D7004A4DAE /* IGCredentialsManager.m */,
 			);
-			path = Network;
+			name = Network;
+			sourceTree = "<group>";
+		};
+		52C7BD2A21A7D657004A4DAE /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				52C7BD1C21A75115004A4DAE /* Constants.h */,
+				52C7BD1D21A75115004A4DAE /* Constants.m */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
+		52C7BD2C21A7D676004A4DAE /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				52C7BD2D21A7D67F004A4DAE /* Controller */,
+			);
+			name = Auth;
+			sourceTree = "<group>";
+		};
+		52C7BD2D21A7D67F004A4DAE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5238FAB921A4A09E005963DC /* IGAuthViewController.h */,
+				5238FABA21A4A09E005963DC /* IGAuthViewController.m */,
+				5238FACD21A4AC84005963DC /* WKWebViewController.h */,
+				5238FACE21A4AC84005963DC /* WKWebViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		52C7BD2E21A7E18F004A4DAE /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				52C7BD3021A7E6AB004A4DAE /* Controller */,
+				52C7BD2F21A7E1B2004A4DAE /* Model */,
+			);
+			name = Feed;
+			sourceTree = "<group>";
+		};
+		52C7BD2F21A7E1B2004A4DAE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		52C7BD3021A7E6AB004A4DAE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				52C7BD3121A7E6D1004A4DAE /* IGFeedViewController.h */,
+				52C7BD3221A7E6D1004A4DAE /* IGFeedViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		A303CF6B4DC943DB042DD708 /* Pods */ = {
@@ -251,6 +280,7 @@
 				5238FABB21A4A09E005963DC /* IGAuthViewController.m in Sources */,
 				52C7BD2421A7C28A004A4DAE /* IGApiService.m in Sources */,
 				5238FAC621A4A0A7005963DC /* main.m in Sources */,
+				52C7BD3321A7E6D1004A4DAE /* IGFeedViewController.m in Sources */,
 				5238FAB821A4A09E005963DC /* AppDelegate.m in Sources */,
 				52C7BD2721A7C3D7004A4DAE /* IGCredentialsManager.m in Sources */,
 				5238FACF21A4AC84005963DC /* WKWebViewController.m in Sources */,
@@ -398,6 +428,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DemoInstagramFeed/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -415,6 +446,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DemoInstagramFeed/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

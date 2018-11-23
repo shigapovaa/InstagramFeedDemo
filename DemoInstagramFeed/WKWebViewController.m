@@ -16,7 +16,6 @@
 
 - (void)loadView {
     [self setView: [WKWebView new]];
-    self.webView.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentAutomatic;
 }
 
 -(WKWebView*)webView {

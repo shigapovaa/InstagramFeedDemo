@@ -17,6 +17,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIButton* startOAuthButton;
 
 - (IBAction)didTapStartOAuthButton:(UIButton *)sender;
+- (void)performAccessTokenRequestWithCode:(nonnull NSString *)code;
+- (void)handleFinalRedirectURL:(NSURL *)url;
+- (void)showAuthenticationErrorWithMessage:(nonnull NSString*)message;
+- (void)showOAuthWebViewController;
 
 @end
 

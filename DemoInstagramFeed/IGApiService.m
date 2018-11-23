@@ -20,13 +20,9 @@
     [igAccessTokenRequest setHTTPMethod:@"POST"];
     
     // Configure request body
-    NSDictionary *bodyDict = @{
-                               @"client_secret": IGClientSecret,
-                               @"grant_type": @"authorization_code",
-                               @"redirect_uri": IGRedirectURI,
-                               @"code": code
-                               };
-    NSData *body = [NSJSONSerialization dataWithJSONObject:bodyDict options:0 error:nil];
+    NSString *bodyString = [NSString stringWithFormat:@"client_id=%@&client_secret=%@&grant_type=%@&redirect_uri=%@&code=%@", IGClientID, IGClientSecret, @"authorization_code", IGRedirectURI, code];
+    NSData *body = [bodyString dataUsingEncoding:NSUTF8StringEncoding];
+    //[igAccessTokenRequest setValue:@"multipart/form-data" forHTTPHeaderField:@"Content-Type"];
     [igAccessTokenRequest setHTTPBody:body];
     
     // perform the task
@@ -50,7 +46,7 @@
             return;
         }
         
-        NSString *accessToken = [[responseBodyDict valueForKey:@"access_token"] stringValue];
+        NSString *accessToken = [responseBodyDict valueForKey:@"access_token"];
         
         // pass parsed response
         dispatch_async(dispatch_get_main_queue(), ^{

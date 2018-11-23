@@ -7,6 +7,7 @@
 //
 
 #import "IGAuthViewController.h"
+#import "IGApiService.h"
 
 @interface IGAuthViewController ()
 
@@ -40,10 +41,18 @@
     }
 }
 
-- (void)performAccessTokenRequestWithCode:(NSString *)code {
+- (void)performAccessTokenRequestWithCode:(nonnull NSString *)code {
     [self.startOAuthButton setEnabled:NO];
     
-    
+    [IGApiService obtainAccessTokenUsingOAuthCode:code completion:^(NSError * _Nullable error, NSString * _Nullable accessToken) {
+        [self.startOAuthButton setEnabled:YES];
+        
+        if (error != nil) {
+            [self showAuthenticationErrorWithMessage:error.localizedDescription];
+        } else {
+            [self showAuthenticationErrorWithMessage:@"EZ ACCESS"];
+        }
+    }];
 }
 
 // MARK: - Routing
