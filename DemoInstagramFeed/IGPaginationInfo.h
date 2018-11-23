@@ -2,7 +2,7 @@
 //  IGPaginationInfo.h
 //  DemoInstagramFeed
 //
-//  Created by Bulat Khabirov on 23/11/2018.
+//  Created by Alsu Shigapova on 23/11/2018.
 //  Copyright © 2018 Alsu Shigapova. All rights reserved.
 //
 
@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface IGPaginationInfo : JSONModel
 
-@property (strong, nonatomic) NSString * _Nullable nextUrl;
+@property (strong, nonatomic) NSString <Optional> * _Nullable nextUrl;
 
 @end
 

@@ -50,7 +50,7 @@
         if (error != nil) {
             [self showAuthenticationErrorWithMessage:error.localizedDescription];
         } else {
-            [self showAuthenticationErrorWithMessage:@"EZ ACCESS"];
+            [self dismissViewControllerAnimated:YES completion:nil];
         }
     }];
 }

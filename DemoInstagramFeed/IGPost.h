@@ -2,12 +2,13 @@
 //  IGPost.h
 //  DemoInstagramFeed
 //
-//  Created by Bulat Khabirov on 23/11/2018.
+//  Created by Alsu Shigapova on 23/11/2018.
 //  Copyright © 2018 Alsu Shigapova. All rights reserved.
 //
 
 #import <JSONModel/JSONModel.h>
 #import "IGUser.h"
+#import "IGImage.h"
 
 NS_ASSUME_NONNULL_BEGIN
 @protocol IGPost;
@@ -16,9 +17,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (strong, nonatomic) IGUser  *user;
 @property (strong, nonatomic) NSString *mediaID;
-@property (strong, nonatomic) NSString *image;
+@property (strong, nonatomic) IGImage *image;
 @property (nonatomic) NSInteger likesCount;
-@property (strong, nonatomic) NSString * _Nullable captionText;
+@property (strong, nonatomic) NSString <Optional> * _Nullable captionText;
 
 @end
 

@@ -83,25 +83,6 @@ Note that Sandbox restricts the API to return only 20 most recent user posts and
             </objects>
             <point key="canvasLocation" x="149.59999999999999" y="-572.56371814092961"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="3gF-DG-E7N">
-            <objects>
-                <viewController id="eWC-JH-nxZ" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="WLj-X7-q47">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="ba4-0E-CeK"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="cqp-cK-lKU"/>
-                    <connections>
-                        <segue destination="V7K-i3-hND" kind="presentation" identifier="auth" id="QjC-mI-rTV"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HEr-SD-Gxt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="980" y="164"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="FAd-ge-Arg">
             <objects>
@@ -113,12 +94,34 @@ Note that Sandbox restricts the API to return only 20 most recent user posts and
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="eWC-JH-nxZ" kind="relationship" relationship="rootViewController" id="aNJ-Gr-uR9"/>
+                        <segue destination="Xh6-4z-HJl" kind="relationship" relationship="rootViewController" id="i03-kY-CEV"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sJQ-lS-cwc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="150" y="164"/>
+        </scene>
+        <!--Feed-->
+        <scene sceneID="pgc-F3-rQk">
+            <objects>
+                <tableViewController id="Xh6-4z-HJl" customClass="IGFeedViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1ai-nB-Ryu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="Xh6-4z-HJl" id="wOz-xD-x6a"/>
+                            <outlet property="delegate" destination="Xh6-4z-HJl" id="hJR-9K-GOD"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Feed" id="7SB-eW-gvi"/>
+                    <connections>
+                        <segue destination="V7K-i3-hND" kind="presentation" identifier="auth" id="Ahp-fw-i3i"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yHv-5B-jDj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="980" y="155"/>
         </scene>
     </scenes>
 </document>

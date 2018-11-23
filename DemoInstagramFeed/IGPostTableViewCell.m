@@ -2,7 +2,7 @@
 //  IGPostTableViewCell.m
 //  DemoInstagramFeed
 //
-//  Created by Bulat Khabirov on 23/11/2018.
+//  Created by Alsu Shigapova on 23/11/2018.
 //  Copyright © 2018 Alsu Shigapova. All rights reserved.
 //
 
@@ -10,15 +10,9 @@
 
 @implementation IGPostTableViewCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
+@synthesize authorNameLabel = _authorNameLabel;
+@synthesize authorAvatarImageView = _authorAvatarImageView;
+@synthesize contentImageView = _contentImageView;
+@synthesize likesCountLabel = _likesCountLabel;
 
 @end

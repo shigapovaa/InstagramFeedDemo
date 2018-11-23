@@ -22,6 +22,9 @@
 		52C7BD3921A7EFC2004A4DAE /* IGUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C7BD3821A7EFC2004A4DAE /* IGUser.m */; };
 		52C7BD3C21A7F3B6004A4DAE /* IGPaginationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C7BD3B21A7F3B6004A4DAE /* IGPaginationInfo.m */; };
 		52C7BD3F21A7F409004A4DAE /* IGMediaResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C7BD3E21A7F409004A4DAE /* IGMediaResponse.m */; };
+		52C7BD4221A7F7B1004A4DAE /* IGImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C7BD4121A7F7B1004A4DAE /* IGImage.m */; };
+		52C7BD4B21A8094E004A4DAE /* IGPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C7BD4921A8094E004A4DAE /* IGPostTableViewCell.m */; };
+		52C7BD4C21A8094E004A4DAE /* IGPostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52C7BD4A21A8094E004A4DAE /* IGPostTableViewCell.xib */; };
 		C506B9408A68AB62865A5C68 /* libPods-DemoInstagramFeed.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 330E48E277639018671258B9 /* libPods-DemoInstagramFeed.a */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +60,11 @@
 		52C7BD3B21A7F3B6004A4DAE /* IGPaginationInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IGPaginationInfo.m; sourceTree = "<group>"; };
 		52C7BD3D21A7F409004A4DAE /* IGMediaResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IGMediaResponse.h; sourceTree = "<group>"; };
 		52C7BD3E21A7F409004A4DAE /* IGMediaResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IGMediaResponse.m; sourceTree = "<group>"; };
+		52C7BD4021A7F7B1004A4DAE /* IGImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IGImage.h; sourceTree = "<group>"; };
+		52C7BD4121A7F7B1004A4DAE /* IGImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IGImage.m; sourceTree = "<group>"; };
+		52C7BD4821A8094E004A4DAE /* IGPostTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IGPostTableViewCell.h; sourceTree = "<group>"; };
+		52C7BD4921A8094E004A4DAE /* IGPostTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IGPostTableViewCell.m; sourceTree = "<group>"; };
+		52C7BD4A21A8094E004A4DAE /* IGPostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IGPostTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +173,7 @@
 		52C7BD2E21A7E18F004A4DAE /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				52C7BD4321A802C9004A4DAE /* View */,
 				52C7BD3021A7E6AB004A4DAE /* Controller */,
 				52C7BD2F21A7E1B2004A4DAE /* Model */,
 			);
@@ -182,6 +191,8 @@
 				52C7BD3B21A7F3B6004A4DAE /* IGPaginationInfo.m */,
 				52C7BD3D21A7F409004A4DAE /* IGMediaResponse.h */,
 				52C7BD3E21A7F409004A4DAE /* IGMediaResponse.m */,
+				52C7BD4021A7F7B1004A4DAE /* IGImage.h */,
+				52C7BD4121A7F7B1004A4DAE /* IGImage.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -193,6 +204,24 @@
 				52C7BD3221A7E6D1004A4DAE /* IGFeedViewController.m */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		52C7BD4321A802C9004A4DAE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				52C7BD4421A802D1004A4DAE /* IGPostTableViewCell */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		52C7BD4421A802D1004A4DAE /* IGPostTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				52C7BD4821A8094E004A4DAE /* IGPostTableViewCell.h */,
+				52C7BD4921A8094E004A4DAE /* IGPostTableViewCell.m */,
+				52C7BD4A21A8094E004A4DAE /* IGPostTableViewCell.xib */,
+			);
+			name = IGPostTableViewCell;
 			sourceTree = "<group>";
 		};
 		A303CF6B4DC943DB042DD708 /* Pods */ = {
@@ -263,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5238FAC321A4A0A7005963DC /* LaunchScreen.storyboard in Resources */,
+				52C7BD4C21A8094E004A4DAE /* IGPostTableViewCell.xib in Resources */,
 				5238FAC021A4A0A7005963DC /* Assets.xcassets in Resources */,
 				5238FABE21A4A09E005963DC /* Main.storyboard in Resources */,
 			);
@@ -301,8 +331,10 @@
 				5238FABB21A4A09E005963DC /* IGAuthViewController.m in Sources */,
 				52C7BD2421A7C28A004A4DAE /* IGApiService.m in Sources */,
 				5238FAC621A4A0A7005963DC /* main.m in Sources */,
+				52C7BD4B21A8094E004A4DAE /* IGPostTableViewCell.m in Sources */,
 				52C7BD3921A7EFC2004A4DAE /* IGUser.m in Sources */,
 				52C7BD3321A7E6D1004A4DAE /* IGFeedViewController.m in Sources */,
+				52C7BD4221A7F7B1004A4DAE /* IGImage.m in Sources */,
 				5238FAB821A4A09E005963DC /* AppDelegate.m in Sources */,
 				52C7BD2721A7C3D7004A4DAE /* IGCredentialsManager.m in Sources */,
 				52C7BD3621A7EF1B004A4DAE /* IGPost.m in Sources */,

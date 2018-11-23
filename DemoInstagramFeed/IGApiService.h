@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "IGMediaResponse.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -33,7 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
  using this URL.
  @param completionHandler A handler that is called on the main thread upon request completion.
  */
-+ (void)getUserRecentPosts:(nullable NSString *)pageURLString completion:(void (^)(NSError* _Nullable error, NSArray* _Nullable posts))completionHandler;
++ (void)getUserRecentPosts:(nullable NSString *)pageURLString completion:(void (^)(NSError* _Nullable error, IGMediaResponse* _Nullable response))completionHandler;
 
 @end
 

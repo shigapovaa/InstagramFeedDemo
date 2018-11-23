@@ -22,7 +22,6 @@
     // Configure request body
     NSString *bodyString = [NSString stringWithFormat:@"client_id=%@&client_secret=%@&grant_type=%@&redirect_uri=%@&code=%@", IGClientID, IGClientSecret, @"authorization_code", IGRedirectURI, code];
     NSData *body = [bodyString dataUsingEncoding:NSUTF8StringEncoding];
-    //[igAccessTokenRequest setValue:@"multipart/form-data" forHTTPHeaderField:@"Content-Type"];
     [igAccessTokenRequest setHTTPBody:body];
     
     // perform the task
@@ -61,8 +60,49 @@
     }] resume];
 }
 
-+ (void)getUserRecentPosts:(NSString *)pageURLString completion:(void (^)(NSError * _Nullable, NSArray * _Nullable))completionHandler {
++ (void)getUserRecentPosts:(NSString *)pageURLString completion:(void (^)(NSError * _Nullable, IGMediaResponse * _Nullable))completionHandler {
+    // obtain access token
+    NSString *accessToken = [IGCredentialsManager getAccessToken];
+    if (accessToken == nil) return;
     
+    NSURL *igRecentMediaRequestURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@v1/users/self/media/recent/?access_token=%@", IGBaseURLString, accessToken]];
+    
+    // Configure HTTP Method
+    NSMutableURLRequest *igRecentMediaRequest = [NSMutableURLRequest requestWithURL:igRecentMediaRequestURL];
+    [igRecentMediaRequest setHTTPMethod:@"GET"];
+    
+    // perform the task
+    [[[NSURLSession sharedSession] dataTaskWithRequest:igRecentMediaRequest completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (error != nil) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completionHandler(error, nil);
+            });
+        }
+        
+        NSLog(@"%@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+        
+        NSError *parsingError;
+        IGMediaResponse *mediaResponse = [[IGMediaResponse alloc] initWithData:data error:&error];
+        
+        if (mediaResponse != nil) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completionHandler(nil, mediaResponse);
+            });
+        } else {
+            NSError *finalError;
+            
+            if (parsingError != nil) {
+                finalError = parsingError;
+            } else {
+                finalError = [NSError new];
+            }
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completionHandler(finalError, nil);
+            });
+        }
+        
+    }] resume];
 }
 
 @end
